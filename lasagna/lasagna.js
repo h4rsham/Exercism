@@ -35,6 +35,10 @@
  */
 const PREPARATION_MINUTES_PER_LAYER = 2;
 
+// Task 1: Define the 'EXPECTED_MINUTES_IN_OVEN' constant
+const EXPECTED_MINUTES_IN_OVEN = 40; // Define the expected oven time in minutes (40 minutes according to the recipe)
+export { EXPECTED_MINUTES_IN_OVEN }; // Export the constant using ES6 module syntax
+
 /**
  * Determines the number of minutes the lasagna still needs to remain in the
  * oven to be properly prepared.
@@ -42,8 +46,10 @@ const PREPARATION_MINUTES_PER_LAYER = 2;
  * @param {number} actualMinutesInOven
  * @returns {number} the number of minutes remaining
  */
+
+// Task 2: Implement the 'remainingMinutesInOven' function
 export function remainingMinutesInOven(actualMinutesInOven) {
-  throw new Error('Remove this line and implement the function');
+  return EXPECTED_MINUTES_IN_OVEN - actualMinutesInOven; // Return the remaining minutes in the oven
 }
 
 /**
@@ -52,8 +58,10 @@ export function remainingMinutesInOven(actualMinutesInOven) {
  * @param {number} numberOfLayers
  * @returns {number} the total preparation time
  */
+
+// Task 3: Implement the 'preparationTimeInMinutes' function
 export function preparationTimeInMinutes(numberOfLayers) {
-  throw new Error('Remove this line and implement the function');
+  return numberOfLayers * 2; // Return the total preparation time
 }
 
 /**
@@ -64,6 +72,8 @@ export function preparationTimeInMinutes(numberOfLayers) {
  * @param {number} actualMinutesInOven
  * @returns {number} the total working time
  */
+
+// Task 4: Implement the 'totalTimeInMinutes' function
 export function totalTimeInMinutes(numberOfLayers, actualMinutesInOven) {
-  throw new Error('Remove this line and implement the function');
+  return (numberOfLayers * 2) + actualMinutesInOven;
 }
