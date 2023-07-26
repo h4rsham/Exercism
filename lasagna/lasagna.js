@@ -75,5 +75,5 @@ export function preparationTimeInMinutes(numberOfLayers) {
 
 // Task 4: Implement the 'totalTimeInMinutes' function
 export function totalTimeInMinutes(numberOfLayers, actualMinutesInOven) {
-  return (numberOfLayers * PREPARATION_MINUTES_PER_LAYER) + actualMinutesInOven;
+  return preparationTimeInMinutes(numberOfLayers) + actualMinutesInOven;
 }
