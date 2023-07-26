@@ -26,8 +26,16 @@
  *
  * @return {boolean} Whether or not you can execute a fast attack.
  */
+
+// Task 1
 export function canExecuteFastAttack(knightIsAwake) {
-  throw new Error('Remove this line and implement the function');
+  // if (knightIsAwake) {
+  //   return false
+  // } else {
+  //   return true
+  // }
+  // return knightIsAwake ? false : true;
+  return !knightIsAwake
 }
 
 /**
@@ -39,8 +47,11 @@ export function canExecuteFastAttack(knightIsAwake) {
  *
  * @returns {boolean} Whether or not you can spy on someone.
  */
+
+// Task 2
 export function canSpy(knightIsAwake, archerIsAwake, prisonerIsAwake) {
-  throw new Error('Remove this line and implement the function');
+  // return knightIsAwake || archerIsAwake || prisonerIsAwake ? true : false;
+  return knightIsAwake || archerIsAwake || prisonerIsAwake;
 }
 
 /**
@@ -51,8 +62,17 @@ export function canSpy(knightIsAwake, archerIsAwake, prisonerIsAwake) {
  *
  * @returns {boolean} Whether or not you can send a signal to the prisoner.
  */
+
+// Task 3
 export function canSignalPrisoner(archerIsAwake, prisonerIsAwake) {
-  throw new Error('Remove this line and implement the function');
+  // if (archerIsAwake == false && prisonerIsAwake == true){
+  //   return true
+  // } else {
+  //   return false
+  // }
+  // return !archerIsAwake && prisonerIsAwake ? true : false;
+  return !archerIsAwake && prisonerIsAwake;
+
 }
 
 /**
@@ -65,11 +85,20 @@ export function canSignalPrisoner(archerIsAwake, prisonerIsAwake) {
  *
  * @returns {boolean} Whether or not you can free Annalyn's friend.
  */
+
+// Task 4
 export function canFreePrisoner(
   knightIsAwake,
   archerIsAwake,
   prisonerIsAwake,
   petDogIsPresent
 ) {
-  throw new Error('Remove this line and implement the function');
+  // if (petDogIsPresent && !archerIsAwake){
+  //   return true
+  // } else if (!petDogIsPresent && prisonerIsAwake && !knightIsAwake && !archerIsAwake){
+  //   return true
+  // } else {
+  //   return false
+  // }
+  return (petDogIsPresent && !archerIsAwake) || (!petDogIsPresent && prisonerIsAwake && !knightIsAwake && !archerIsAwake)
 }
