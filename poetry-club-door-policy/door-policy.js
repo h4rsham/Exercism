@@ -26,8 +26,14 @@
  * @param {string} line
  * @returns {string}
  */
+
+// Task 1
 export function frontDoorResponse(line) {
-  throw new Error('Remove this line and implement the function');
+  // make the whole line into lowercase and then slice the first letter of the line and capitalise it, then add the rest of the line to it
+  let lineLower = line.toLowerCase();
+  let capitalisedLine = lineLower.charAt(0).toUpperCase() + lineLower.slice(1);
+  let capitalisedLetter = line.charAt(0).toUpperCase();
+  return capitalisedLetter;
 }
 
 /**
@@ -37,8 +43,14 @@ export function frontDoorResponse(line) {
  * @param {string} word the letters you responded with before
  * @returns {string} the front door password
  */
+
+// Task 2
 export function frontDoorPassword(word) {
-  throw new Error('Remove this line and implement the function');
+
+  // capitalize the first letter of the word
+  let wordLower = word.toLowerCase();
+  let capitalizedWord = wordLower.charAt(0).toUpperCase() + wordLower.slice(1);
+  return capitalizedWord;
 }
 
 /**
@@ -48,8 +60,20 @@ export function frontDoorPassword(word) {
  * @param {string} line
  * @returns {string}
  */
+
+// Task 3
 export function backDoorResponse(line) {
-  throw new Error('Remove this line and implement the function');
+  // // loop through the line from the back and find the first letter that is not a space
+  // for (let i = line.length - 1; i >= 0; i--) {
+  //   if (line[i] !== " ") {
+  //     return line[i];
+  //   }
+  // }
+  let trimmedLine = line.trim(); // trim the line to remove the spaces at the end
+  return trimmedLine.charAt(trimmedLine.length - 1); // return the last letter of the trimmed line
+
+  // let lastLetter = line.charAt(line.length - 1);
+  // return lastLetter
 }
 
 /**
@@ -59,6 +83,11 @@ export function backDoorResponse(line) {
  * @param {string} word the letters you responded with before
  * @returns {string} the back door password
  */
+
+// Task 4
 export function backDoorPassword(word) {
-  throw new Error('Remove this line and implement the function');
+  // make the whole word lowercase and then slice the first letter of the word and capitalise it, then add the rest of the word to it
+  let wordLower = word.toLowerCase();
+  let capitalisedWord = wordLower.charAt(0).toUpperCase() + wordLower.slice(1);
+  return capitalisedWord + ', please';
 }
